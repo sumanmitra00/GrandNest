@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #F8F5EE;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #D4AF37; color: #070B14; }
+
+/* signature: perforated keycard edge, used on hotel cards + booking summary */
+.keycard-edge {
+  position: relative;
+}
+.keycard-edge::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: -1px;
+  width: 1px;
+  background-image: repeating-linear-gradient(to bottom, rgba(212,175,55,0.55) 0 6px, transparent 6px 14px);
+}
+
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.text-balance { text-wrap: balance; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeUp { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* custom focus ring */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* subtle scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #070B14; }
+::-webkit-scrollbar-thumb { background: #B8912A; border-radius: 6px; }

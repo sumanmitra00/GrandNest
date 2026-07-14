@@ -1,0 +1,126 @@
+const img = (seed, w = 900, h = 600) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
+
+export const amenitiesList = [
+  'WiFi', 'Pool', 'Spa', 'Gym', 'Restaurant', 'Parking',
+  'Airport Pickup', 'Breakfast', 'Room Service', 'Laundry', 'Pet Friendly', 'Bar',
+];
+
+export const hotels = [
+  {
+    id: 'gn-001', name: 'The Aurelia', city: 'Dubai', country: 'UAE',
+    price: 620, rating: 4.9, reviews: 312, stars: 5, type: 'Resort',
+    tagline: 'A gilded skyline retreat above the Gulf.',
+    description: 'The Aurelia crowns the Dubai skyline with sweeping views of the Gulf, marble-lined suites, and a rooftop infinity pool that seems to spill into the horizon. Every stay is shaped around quiet, attentive luxury.',
+    amenities: ['WiFi', 'Pool', 'Spa', 'Gym', 'Restaurant', 'Airport Pickup', 'Bar', 'Room Service'],
+    image: img('aurelia-dubai-1'),
+    gallery: [img('aurelia-dubai-1'), img('aurelia-dubai-2'), img('aurelia-dubai-3'), img('aurelia-dubai-4')],
+  },
+  {
+    id: 'gn-002', name: 'Maison Vér', city: 'Paris', country: 'France',
+    price: 540, rating: 4.8, reviews: 268, stars: 5, type: 'Boutique',
+    tagline: 'Left Bank elegance, one block from the Seine.',
+    description: 'Housed in a restored 19th-century townhouse, Maison Vér pairs Haussmannian architecture with understated modern interiors. Mornings begin with pastries from the in-house boulangerie.',
+    amenities: ['WiFi', 'Spa', 'Restaurant', 'Room Service', 'Laundry', 'Bar'],
+    image: img('maison-ver-paris-1'),
+    gallery: [img('maison-ver-paris-1'), img('maison-ver-paris-2'), img('maison-ver-paris-3'), img('maison-ver-paris-4')],
+  },
+  {
+    id: 'gn-003', name: 'Nautilus Overwater', city: 'Maldives', country: 'Maldives',
+    price: 980, rating: 5.0, reviews: 189, stars: 5, type: 'Resort',
+    tagline: 'Glass floors over the lagoon, stars overhead.',
+    description: 'Private overwater villas with glass-floor panels, direct lagoon access, and a dedicated butler for every stay. Nautilus is built for slow mornings and slower sunsets.',
+    amenities: ['WiFi', 'Pool', 'Spa', 'Restaurant', 'Airport Pickup', 'Breakfast', 'Room Service'],
+    image: img('nautilus-maldives-1'),
+    gallery: [img('nautilus-maldives-1'), img('nautilus-maldives-2'), img('nautilus-maldives-3'), img('nautilus-maldives-4')],
+  },
+  {
+    id: 'gn-004', name: 'Sawah Retreat', city: 'Bali', country: 'Indonesia',
+    price: 340, rating: 4.7, reviews: 421, stars: 4, type: 'Villa',
+    tagline: 'Private pools among the rice terraces of Ubud.',
+    description: 'Set into the terraced hillsides of Ubud, Sawah Retreat offers thatched-roof villas, private plunge pools, and a wellness pavilion overlooking the paddies at dawn.',
+    amenities: ['WiFi', 'Pool', 'Spa', 'Breakfast', 'Pet Friendly', 'Gym'],
+    image: img('sawah-bali-1'),
+    gallery: [img('sawah-bali-1'), img('sawah-bali-2'), img('sawah-bali-3'), img('sawah-bali-4')],
+  },
+  {
+    id: 'gn-005', name: 'Chalet Argent', city: 'Zermatt', country: 'Switzerland',
+    price: 710, rating: 4.9, reviews: 154, stars: 5, type: 'Chalet',
+    tagline: 'Alpine timber and Matterhorn views.',
+    description: 'A ski-in, ski-out chalet built from reclaimed alpine timber, with a cedar sauna, an open-hearth dining room, and uninterrupted views of the Matterhorn.',
+    amenities: ['WiFi', 'Spa', 'Restaurant', 'Parking', 'Room Service', 'Gym'],
+    image: img('chalet-argent-zermatt-1'),
+    gallery: [img('chalet-argent-zermatt-1'), img('chalet-argent-zermatt-2'), img('chalet-argent-zermatt-3'), img('chalet-argent-zermatt-4')],
+  },
+  {
+    id: 'gn-006', name: 'The Wintergreen', city: 'New York', country: 'USA',
+    price: 590, rating: 4.6, reviews: 503, stars: 5, type: 'City Hotel',
+    tagline: 'Art Deco grandeur on Fifth Avenue.',
+    description: 'A restored Art Deco landmark steps from Fifth Avenue, The Wintergreen pairs brass detailing and jazz-age interiors with a Michelin-recognized dining room.',
+    amenities: ['WiFi', 'Gym', 'Restaurant', 'Bar', 'Room Service', 'Laundry', 'Parking'],
+    image: img('wintergreen-nyc-1'),
+    gallery: [img('wintergreen-nyc-1'), img('wintergreen-nyc-2'), img('wintergreen-nyc-3'), img('wintergreen-nyc-4')],
+  },
+  {
+    id: 'gn-007', name: 'Cielo Alto', city: 'Santorini', country: 'Greece',
+    price: 460, rating: 4.8, reviews: 276, stars: 5, type: 'Boutique',
+    tagline: 'Whitewashed cliffs above the caldera.',
+    description: 'Carved into the caldera cliffs, Cielo Alto offers private plunge pools and terraces framed for the Santorini sunset, with Cycladic minimalism throughout.',
+    amenities: ['WiFi', 'Pool', 'Breakfast', 'Bar', 'Airport Pickup'],
+    image: img('cielo-alto-santorini-1'),
+    gallery: [img('cielo-alto-santorini-1'), img('cielo-alto-santorini-2'), img('cielo-alto-santorini-3'), img('cielo-alto-santorini-4')],
+  },
+  {
+    id: 'gn-008', name: 'Kensington Row', city: 'London', country: 'UK',
+    price: 480, rating: 4.7, reviews: 398, stars: 4, type: 'City Hotel',
+    tagline: 'A quiet townhouse hotel near the gardens.',
+    description: 'A Georgian townhouse turned discreet hotel, Kensington Row offers library lounges, an in-house tea service, and rooms overlooking private garden squares.',
+    amenities: ['WiFi', 'Restaurant', 'Room Service', 'Laundry', 'Pet Friendly'],
+    image: img('kensington-row-london-1'),
+    gallery: [img('kensington-row-london-1'), img('kensington-row-london-2'), img('kensington-row-london-3'), img('kensington-row-london-4')],
+  },
+  {
+    id: 'gn-009', name: 'Sol y Piedra', city: 'Tulum', country: 'Mexico',
+    price: 390, rating: 4.6, reviews: 231, stars: 4, type: 'Resort',
+    tagline: 'Jungle-fringed beachfront, barefoot luxury.',
+    description: 'Where jungle meets shoreline, Sol y Piedra is built from raw stone and reclaimed wood, with an open-air spa and beachfront cabanas for slow afternoons.',
+    amenities: ['WiFi', 'Pool', 'Spa', 'Restaurant', 'Breakfast', 'Bar'],
+    image: img('sol-piedra-tulum-1'),
+    gallery: [img('sol-piedra-tulum-1'), img('sol-piedra-tulum-2'), img('sol-piedra-tulum-3'), img('sol-piedra-tulum-4')],
+  },
+  {
+    id: 'gn-010', name: 'Torii Garden House', city: 'Kyoto', country: 'Japan',
+    price: 520, rating: 4.9, reviews: 174, stars: 5, type: 'Ryokan',
+    tagline: 'A modern ryokan beside a moss garden.',
+    description: 'A contemporary ryokan set around a moss garden, with private onsen baths, tatami suites, and a kaiseki dining room that changes with the season.',
+    amenities: ['WiFi', 'Spa', 'Restaurant', 'Room Service', 'Breakfast'],
+    image: img('torii-kyoto-1'),
+    gallery: [img('torii-kyoto-1'), img('torii-kyoto-2'), img('torii-kyoto-3'), img('torii-kyoto-4')],
+  },
+  {
+    id: 'gn-011', name: 'Casa Del Faro', city: 'Amalfi Coast', country: 'Italy',
+    price: 670, rating: 4.9, reviews: 205, stars: 5, type: 'Boutique',
+    tagline: 'Terraced cliffside villas above the Tyrrhenian Sea.',
+    description: 'Perched above the Tyrrhenian Sea, Casa Del Faro offers terraced lemon groves, a cliffside infinity pool, and a private funicular down to the water.',
+    amenities: ['WiFi', 'Pool', 'Spa', 'Restaurant', 'Airport Pickup', 'Bar'],
+    image: img('casa-faro-amalfi-1'),
+    gallery: [img('casa-faro-amalfi-1'), img('casa-faro-amalfi-2'), img('casa-faro-amalfi-3'), img('casa-faro-amalfi-4')],
+  },
+  {
+    id: 'gn-012', name: 'Northlight Lodge', city: 'Reykjavík', country: 'Iceland',
+    price: 430, rating: 4.7, reviews: 142, stars: 4, type: 'Lodge',
+    tagline: 'Glass-roofed suites for the northern lights.',
+    description: 'Glass-roofed suites let the aurora in without leaving your bed. Northlight Lodge pairs geothermal spa pools with minimalist Nordic interiors.',
+    amenities: ['WiFi', 'Spa', 'Restaurant', 'Parking', 'Breakfast'],
+    image: img('northlight-reykjavik-1'),
+    gallery: [img('northlight-reykjavik-1'), img('northlight-reykjavik-2'), img('northlight-reykjavik-3'), img('northlight-reykjavik-4')],
+  },
+];
+
+export const roomTypes = (basePrice) => [
+  { id: 'suite', name: 'Luxury Suite', price: basePrice, capacity: '2 Adults', facilities: ['King Bed', 'City View', 'Marble Bath', 'Lounge Access'], image: img('room-suite-' + basePrice) },
+  { id: 'deluxe', name: 'Deluxe Room', price: Math.round(basePrice * 0.72), capacity: '2 Adults', facilities: ['Queen Bed', 'Garden View', 'Rain Shower'], image: img('room-deluxe-' + basePrice) },
+  { id: 'family', name: 'Family Room', price: Math.round(basePrice * 1.25), capacity: '2 Adults, 2 Children', facilities: ['Two Queen Beds', 'Connecting Option', 'Kids Amenities'], image: img('room-family-' + basePrice) },
+  { id: 'presidential', name: 'Presidential Suite', price: Math.round(basePrice * 2.4), capacity: '4 Adults', facilities: ['Private Terrace', 'Butler Service', 'Dining Room', 'Jacuzzi'], image: img('room-presidential-' + basePrice) },
+];
+
+export const findHotel = (id) => hotels.find(h => h.id === id);
